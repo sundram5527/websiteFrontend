@@ -1,4 +1,4 @@
-// hosting link:website-frontend-hxa0ylgym-sundram-kumars-projects-6a3481a2.vercel.app
+// hosting link:https://website-frontend-alpha-two.vercel.app/
 // Updated App.jsx for Trading Learning Website with Contact Us
 import React, { useEffect, useState } from 'react';
 import axios from 'axios'; //install axios , shadcn, card & button from shadcn, lucide-react
@@ -11,7 +11,7 @@ function App() {
   const [status, setStatus] = useState('');
 
   useEffect(() => {
-    axios.get('websitebackend-4fuvgt33x-sundram-kumars-projects-6a3481a2.vercel.app/api/contact').then((res) => setEvents(res.data));
+    axios.get('https://websitebackend-six.vercel.app//api/contact').then((res) => setEvents(res.data));
   }, []);
 
 
@@ -19,7 +19,7 @@ function App() {
 
   const handleContactSubmit = (e) => {
     e.preventDefault();
-    axios.post('websitebackend-4fuvgt33x-sundram-kumars-projects-6a3481a2.vercel.app/api/contact', contact).then((res) => {
+    axios.post('https://websitebackend-six.vercel.app//api/contact', contact).then((res) => {
       setStatus('Message sent successfully!');
       setContact({ name: '', email: '', message: '' });
     }).catch(() => setStatus('Failed to send message.'));
