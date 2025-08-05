@@ -11,7 +11,7 @@ function App() {
   const [status, setStatus] = useState('');
 
   useEffect(() => {
-    axios.get('https://websitebackend-six.vercel.app//api/contact').then((res) => setEvents(res.data));
+    axios.get('https://websitebackend-six.vercel.app/api/contact').then((res) => setEvents(res.data));
   }, []);
 
 
@@ -19,7 +19,7 @@ function App() {
 
   const handleContactSubmit = (e) => {
     e.preventDefault();
-    axios.post('https://websitebackend-six.vercel.app//api/contact', contact).then((res) => {
+    axios.post('https://websitebackend-six.vercel.app/api/contact', contact).then((res) => {
       setStatus('Message sent successfully!');
       setContact({ name: '', email: '', message: '' });
     }).catch(() => setStatus('Failed to send message.'));
